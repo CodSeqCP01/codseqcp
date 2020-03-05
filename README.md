@@ -60,5 +60,5 @@ Homologous Coding or Genomic Sequence Clustering Pipeline
 
 
 	SUPPORT
-		Contact an author directly: edson.ishengoma@muce.ac.tz
+		Contact edson.ishengoma@muce.ac.tz or clintr@sun.ac.za for technical or scientific support
     
