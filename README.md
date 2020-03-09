@@ -45,8 +45,8 @@ Homologous Coding or Genomic Sequence Clustering Pipeline
 		e.g. samplename_R1.fastq
 		and the file with reverse reads is suffixed with _R2
 		e.g. samplename_R2.fastq
-
-       		evalue is an integer value that describes the number of hits one can "expect" 
+		
+		evalue is an integer value that describes the number of hits one can "expect" 
 		to return just by chance during a blast search
 
 		species_name is a species pre-trained in Augustus for gene prediction.
