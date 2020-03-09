@@ -4,6 +4,12 @@ import sys, codseqcp
 from collections import Counter
 import matplotlib.pyplot as plt
 
+''' Plots the distribution of homologous clusters recovered across samples'''
+
+# Usage: cluster_plot.py clusterfile
+# clusterfile is the final containing clustered sequences
+# following codseqcp run
+
 seq_dict = codseqcp.parsefasta(open(sys.argv[1]))
 
 Clusters = []
