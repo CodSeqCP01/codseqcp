@@ -7,17 +7,30 @@ Homologous Coding or Genomic Sequence Clustering Pipeline
 		phylogenetics, etc, analyses
 
 	USAGE
+		# clustering coding sequences
 		python codeqcp.py samplenamesfile evalue cds species_name
-		example: python codseqcp.py samples.txt 1e-5 cds Danio_rerio
-		run the above command to cluster coding sequences using the 
-		data set in the test folder
-
-		or
-
+		
+		# clustering genomic sequences
 		python codseqcp.py samplenamesfiles evalue genomic
-		example: python codseqcp.py samples.txt 1e-5 genomic
-		run the above command to cluster genomic sequences
-		using the data set in the test folder
+		
+		examples:
+		# get CodSeqCP set of scripts
+		git clone https://github.com/CodSeqCP01/CodSeqCP.git 
+		# move all the scripts in the "test" directory
+		# be sure BLAST, SPAdes and Augustus are installed and available in your path then run;
+		
+		python codseqcp.py samples.txt 1e-5 cds Danio_rerio
+		to cluster coding sequences
+		
+		or
+		
+		python codseqcp.py samples.txt 1e-5 genomic
+		to cluster genomic sequences
+		
+		After CodSeqCP finishes you can run;
+		python cluster_plot.py clustered_cds.fasta
+		
+		to view the graphical representation of your clusters (matplotlib has to be installed)
 
 	DESCRIPTION
 		samplefilenames is a list of fastq names without ".fastq" extension
@@ -130,10 +143,11 @@ Homologous Coding or Genomic Sequence Clustering Pipeline
 			- Augustus (for gene prediction)
 
 			- blast+ (for sequence alignment)
+			
 
 
 	SUPPORT
-		Contact an author directly: edson.ishengoma@muce.ac.tz
+		Contact edson.ishengoma@muce.ac.tz or clintr@sun.ac.za for technical and/or scientific support
 
 
     
