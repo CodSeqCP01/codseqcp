@@ -1,0 +1,38 @@
+{% set name = "codseqcp" %}
+{% set version = "0.0.1" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: ca1fe9b9eed4c072817c5a549abba8318e1f555578ba8378b6847c78c7af0c96
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - python
+
+test:
+  imports:
+    - CODSEQCP
+
+about:
+  home: "https://github.com/CodSeqCP01"
+  license: MIT
+  license_family: MIT
+  license_file: 
+  summary: "Pipeline for Clustering Homologous Coding or Genomic Sequence from Raw Fastq Reads"
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - your-github-id-here
