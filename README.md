@@ -1,5 +1,12 @@
 # CodSeqCP
 Homologous Coding or Genomic Sequence Clustering Pipeline
+Clusters genomic or coding sequences from raw fastq file of multiple individuals or species 
+for population, phylogenetics, etc analyses
+
+Usage
+
+Command line arguments for clustering genomic sequences
+	python codseqcp.py -in SAMPLES_NAMES_FILE, -o OUTPUT_SEQ_TYPE -e E_VALUE
 	
 	PROGRAM
 		codseqcp - clusters homologous genomic or coding sequences from
