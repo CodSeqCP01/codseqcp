@@ -165,11 +165,26 @@ You can directly clone the pipeline directly as so,
 		to test if the program is running
 		
 or you can use the CODSEQCP conda installation to escape the hurdles of installing individual requirements separately
-
-	# download the conda environment file
 	
+	# be sure you have anaconda or its ligter version "miniconda" installed;
+	
+	# download the conda environment file here;
+	
+	wget https://raw.githubusercontent.com/CodSeqCP01/codseqcp/master/codseqcp-0.0.1-linux64.yml
+	
+	# install CODSEQCP and all its dependencies in a conda environment named codseqcp-0.0.1
+	conda env create -f codseqcp-0.0.1-linux64.yml
+	
+	# activate your codseqcp-0.0.1 environment
+	source activate codseqcp-0.0.1
+	
+	# CODSEQCP set of scripts will be located at something like  ~/miniconda3/envs/codeqcp-0.0.1/lib/python3.8/site-packages/CODSEQCP
+	# you can move these scripts in some convenient working directory and run the main codseqcp.py script while you are still in the 
+		active codseqcp conda environment
+	
+	
+**Support**
 		
-	SUPPORT
 		Contact edson.ishengoma@muce.ac.tz or clintr@sun.ac.za for technical and/or scientific support
 
 
