@@ -50,6 +50,7 @@ If paired reads are in separate files,
 		e.g. samplename_R2.fastq
 		
 _OUTPUT_SEQ_TYPE_
+ 
  Can either be cds in which case the pipeline will run augustus on assembled sequences to extract to output sequences with
  coding potential, or genomic in which case the pipeline will cluster genomic sequences right after the assembly step.
  
@@ -127,7 +128,8 @@ List of supported Augustus species is as follows
 		s_aureus	Staphylococcus aureus	Staphylococcus_aureus
 		volvox	Volvox carteri	Volvox_carteri
 		
-Output results
+
+**Output results**
 
 The final result is a cluster of sequences in FASTA formatted file named
 
@@ -138,16 +140,35 @@ or
 		clustered_genomic.fasta
 
 	
-Prerequisites
-		CodSeqCP runs on linux and assumes that below programs are in your path
+**Prerequisites**
+		
+
 			- Python
 			- Linux 64 bits
 			- SPAdes (for reads assembly)
 			- Augustus (for gene prediction)
 			- blast+ (for sequence alignment)
 			
+**Installation**
 
+You can directly clone the pipeline directly as so,
 
+	# get CodSeqCP set of scripts
+		git clone https://github.com/CodSeqCP01/codseqcp.git 
+		
+		# cd codseqcp
+		# modify the path of your samples in samples.txt to indicate the actual location of your samples; 
+		# be sure BLAST, SPAdes and Augustus are installed and available in your path then run;
+		
+		python codseqcp.py -in samples.txt -e 1e-5 -o cds -sp Danio_rerio
+		
+		to test if the program is running
+		
+or you can use the CODSEQCP conda installation to escape the hurdles of installing individual requirements separately
+
+	# download the conda environment file
+	
+		
 	SUPPORT
 		Contact edson.ishengoma@muce.ac.tz or clintr@sun.ac.za for technical and/or scientific support
 
