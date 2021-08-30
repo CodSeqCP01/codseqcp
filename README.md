@@ -3,77 +3,69 @@ Homologous Coding or Genomic Sequence Clustering Pipeline
 Clusters genomic or coding sequences from raw fastq file of multiple individuals or species 
 for population, phylogenetics, etc analyses
 
-Usage
+**Usage**
 
 Command line arguments for clustering genomic sequences
+		
 	python codseqcp.py -in SAMPLES_NAMES_FILE, -o OUTPUT_SEQ_TYPE -e E_VALUE
 	
-	PROGRAM
-		codseqcp - clusters homologous genomic or coding sequences from
-		fastq files of multiple individuals or species for population,
-		phylogenetics, etc, analyses
+	#example
+	python codseqcp.py -in samples.txt -o genomic -e 1e-5 
+	
+For clustering coding sequences
+				
+				
+				
+		python codseqcp.py -in SAMPLES_NAMES_FILE, -o OUTPUT_SEQ_TYPE -e E_VALUE -sp SPECIES_NAME
 
-	USAGE
-		# clustering coding sequences
-		python codeqcp.py samplenamesfile evalue cds species_name
+		#example
+		python codseqcp.py -in samples.txt -e 1e-5 -o cds -sp Danio_rerio
 		
-		# clustering genomic sequences
-		python codseqcp.py samplenamesfiles evalue genomic
-		
-		examples:
-		# get CodSeqCP set of scripts
-		git clone https://github.com/CodSeqCP01/CodSeqCP.git 
-		# move all the scripts in the "test" directory
-		# be sure BLAST, SPAdes and Augustus are installed and available in your path then run;
-		
-		python codseqcp.py samples.txt 1e-5 cds Danio_rerio
-		to cluster coding sequences
-		
-		or
-		
-		python codseqcp.py samples.txt 1e-5 genomic
-		to cluster genomic sequences
-		
-		After CodSeqCP finishes you can run;
-		python cluster_plot.py clustered_cds.fasta
-		
-		to view the graphical representation of your clusters (matplotlib has to be installed)
 
-	DESCRIPTION
-		samplefilenames is a list of fastq names without ".fastq" extension
-		followed by tab delimitted annotations:
-		
-		for Illumina-based single read library
+**Description**
 
+_SAMPLES_NAMES_FILE_  
+A text file which specify the location, the name of your sample file and whether the library is single or paired (e.g.)
+
+for Illumina-based single libraries
+				
 		samplename	single
 
-		for IonTorrent-based unpaired library
+for IonTorrent-based unpaired library
 
 		samplename	iontorrent
 
-		for Illumina-based paired-reads in single file
+for Illumina-based paired-reads in single file
 
 		samplename	paired	interlaced
 
-		for Illumina-based paired-reads in separate files
+for Illumina-based paired-reads in separate files
 
 		samplename	paired	separate
       
-		The program assumes that the fastq files are in the same working directory
-		where the program is located. If paired reads are in separate files,
+If paired reads are in separate files,
 		the file with forward reads is suffixed with _R1
 		e.g. samplename_R1.fastq
 		and the file with reverse reads is suffixed with _R2
 		e.g. samplename_R2.fastq
 		
-		evalue is an integer value that describes the number of hits one can "expect" 
-		to return just by chance during a blast search
+_OUTPUT_SEQ_TYPE_
+ Can either be cds in which case the pipeline will run augustus on assembled sequences to extract to output sequences with
+ coding potential, or genomic in which case the pipeline will cluster genomic sequences right after the assembly step.
+ 
+ _E_VALUE_
 
-		species_name is a species pre-trained in Augustus for gene prediction.
-		Convention used in CodSeqCP is to have a species name connected by an underscore "_".
+An integer value that describes the number of hits one can "expect" to return just by chance during a blast search
+
+_SPECIES_NAME_
+
+Is the name of species whose gene models are already pre-configured in Augustus for gene prediction. CODSEQCP co-opt these
+species as proxies for cds prediction
+
+Convention used in CodSeqCP is to have a species name connected by an underscore "_".
 		e.g. Danio_rerio
 
-		List of supported Augustus species is as follows
+List of supported Augustus species is as follows
 		
 		identifier	species	CodSeqCP 
 		human	Homo sapiens	Homo_sapiens
@@ -135,20 +127,23 @@ Command line arguments for clustering genomic sequences
 		s_aureus	Staphylococcus aureus	Staphylococcus_aureus
 		volvox	Volvox carteri	Volvox_carteri
 		
-		The final result is a cluster of sequences in FASTA formatted file named
+Output results
+
+The final result is a cluster of sequences in FASTA formatted file named
 
 		clustered_cds.fasta
 
-			or
+or
 
 		clustered_genomic.fasta
 
-	REQUIREMENTS
+	
+Prerequisites
 		CodSeqCP runs on linux and assumes that below programs are in your path
+			- Python
+			- Linux 64 bits
 			- SPAdes (for reads assembly)
-
 			- Augustus (for gene prediction)
-
 			- blast+ (for sequence alignment)
 			
 
