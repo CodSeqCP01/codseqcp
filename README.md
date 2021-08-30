@@ -176,7 +176,7 @@ or you can use the CODSEQCP conda installation to escape the hurdles of installi
 	conda env create -f codseqcp-0.0.1-linux64.yml
 	
 	# activate your codseqcp-0.0.1 environment
-	source activate codseqcp-0.0.1
+	conda activate codseqcp-0.0.1
 	
 	# CODSEQCP set of scripts will be located at something like  ~/miniconda3/envs/codeqcp-0.0.1/lib/python3.8/site-packages/CODSEQCP
 	# you can move these scripts in some convenient working directory and run the main codseqcp.py script while you are still in the 
