@@ -170,17 +170,32 @@ or you can use the CODSEQCP conda installation to escape the hurdles of installi
 	
 	# download the conda environment file here;
 	
-	wget https://raw.githubusercontent.com/CodSeqCP01/codseqcp/master/codseqcp-0.0.1-linux64.yml
+	wget https://raw.githubusercontent.com/CodSeqCP01/codseqcp/master/codseqcp-0.0.1-linux64.yml for linux
+	
+	or 
+	
+	wget https://raw.githubusercontent.com/CodSeqCP01/codseqcp/master/codseqcp-0.0.1-osx64.yml
 	
 	# install CODSEQCP and all its dependencies in a conda environment named codseqcp-0.0.1
+	# on linux:
 	conda env create -f codseqcp-0.0.1-linux64.yml
+	
+	# on mac:
+	conda env create -f codseqcp-0.0.1-osx64.yml
 	
 	# activate your codseqcp-0.0.1 environment
 	conda activate codseqcp-0.0.1
 	
+	# check the list of installed dependencies 
+	conda list
+	
 	# CODSEQCP set of scripts will be located at something like  ~/miniconda3/envs/codeqcp-0.0.1/lib/python3.8/site-packages/CODSEQCP
-	# you can move these scripts in some convenient working directory and run the main codseqcp.py script while you are still in the 
-		active codseqcp conda environment
+	# you can move the package folder to some convenient working directory and run the main codseqcp.py from there;
+	# e.g.
+	cp -r CODSEQCP ~/
+	cd ~/CODSEQCP
+	
+	
 	
 	
 **Support**
