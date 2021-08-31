@@ -51,9 +51,9 @@ If paired reads are in separate files,
 		
 _OUTPUT_SEQ_TYPE_
  
- Can either be cds in which case the pipeline will run augustus on assembled sequences to extract to output sequences with
- coding potential, or genomic in which case the pipeline will cluster genomic sequences right after the assembly step.
- 
+ Can either be '<cdsr>' in which case the pipeline will run augustus on assembled sequences to extract to output sequences with
+ coding potential, or genomic in which case the pipeline will cluster genomic sequences right after the assembly step. 
+  
  _E_VALUE_
 
 An integer value that describes the number of hits one can "expect" to return just by chance during a blast search
