@@ -192,7 +192,6 @@ or you can use the CODSEQCP conda installation to escape the hurdles of installi
 	# CODSEQCP set of scripts will be located at something like  ~/miniconda3/envs/codeqcp-0.0.1/lib/python3.8/site-packages/CODSEQCP
 	# you can move the package folder to some convenient working directory and run the main codseqcp.py from there with the test samples;
 	# e.g.
-	# download test samples
 	cp -r CODSEQCP ~/
 	cd ~/CODSEQCP
 	
