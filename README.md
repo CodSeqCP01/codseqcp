@@ -166,7 +166,7 @@ You can directly clone the pipeline directly as so,
 		
 or you can use the CODSEQCP conda installation to escape the hurdles of installing individual requirements separately
 	
-	# be sure you have anaconda or its ligter version "miniconda" installed;
+	# be sure you have anaconda or its lighter version "miniconda" installed;
 	
 	# download the conda environment file here;
 	
