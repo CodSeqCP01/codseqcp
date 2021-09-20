@@ -144,7 +144,7 @@ or
 		
 
 			- Python
-			- Linux 64 bits
+			- Linux 64 bits or Mac 64 bits
 			- SPAdes (for reads assembly)
 			- Augustus (for gene prediction)
 			- blast+ (for sequence alignment)
