@@ -7,7 +7,7 @@ for population, phylogenetics, etc analyses
 
 Command line arguments for clustering genomic sequences
 		
-	python codseqcp.py -in SAMPLES_NAMES_FILE, -o OUTPUT_SEQ_TYPE -e E_VALUE
+	python codseqcp.py -in SAMPLES_NAMES_FILE -o OUTPUT_SEQ_TYPE -e E_VALUE
 	
 	#example
 	python codseqcp.py -in samples.txt -o genomic -e 1e-5 
@@ -16,7 +16,7 @@ For clustering coding sequences
 				
 				
 				
-		python codseqcp.py -in SAMPLES_NAMES_FILE, -o OUTPUT_SEQ_TYPE -e E_VALUE -sp SPECIES_NAME
+		python codseqcp.py -in SAMPLES_NAMES_FILE -o OUTPUT_SEQ_TYPE -e E_VALUE -sp SPECIES_NAME
 
 		#example
 		python codseqcp.py -in samples.txt -e 1e-5 -o cds -sp Danio_rerio
